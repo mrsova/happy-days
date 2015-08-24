@@ -116,6 +116,15 @@ nav ul{
    width:100%;
    padding: 0px 54px;
 }
+nav{
+    position:relative;
+}
+nav:after{
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ECEBEA;
+    box-shadow: 0px 0px 0px 0.1px #ECEBEA;
+}
 nav ul li{
     float:left;
     margin-right: 25px;
@@ -142,13 +151,15 @@ nav ul li a:after {
     background: #ff6d6d;
     transition: width .3s ease-in-out;
 }
-
-a:hover{
+nav ul li .topA:after{
+    top:39px;
+}
+nav ul li a:hover{
     color:#ff6d6d;
 }
 
-a:hover:after,
-a:focus:after{
+nav ul li a:hover:after,
+nav ul li a:focus:after{
     width: 100%;
     color: #ff6d6d;
 }
@@ -158,9 +169,22 @@ a:focus:after{
 .banner_1{
     width:100%;
     height:713px;
-    background:url("../images/banner.png") no-repeat;
+    background:url("../images/banner.png");
     background-size:cover;
 }
+
+@media screen and (max-width: 1336px) {
+    .banner_1{
+        background-position: -59px 0px;
+
+    }
+}
+@media screen and (max-width: 1206px) {
+    .banner_1{
+        background-position: -155px 0px;
+    }
+}
+
 .red_text{
     color:#fb5151;
 }
@@ -189,7 +213,7 @@ a:focus:after{
 }
 .rast{
     display:none;
-    height:81px;
+    height:61px;
 }
 .garant:after{
     content:'';
