@@ -4,6 +4,7 @@ $(document).ready(function(){
         var top = $(document).scrollTop();
         if (top < 180){
             $('.nav').removeClass('nav_fixed');
+            $('nav ul li a').removeClass('topA');
             $('.rast').hide();
             $('nav ul li').animate({
                 paddingTop:"30px",
