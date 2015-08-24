@@ -1,5 +1,3 @@
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,15 +23,38 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
-a, a:hover{
+a{
     text-decoration: none;
+    font-size:1em;
+    color:#737373;
+}
+a:link{
+    text-decoration: none;
+    font-size:1em;
+    color:#737373;
+}
+a:visited{
+    text-decoration: none;
+    font-size:1em;
+    color:#737373;
+}
+a:hover{
+    text-decoration: none;
+    color:#737373;
 }
 body {
-    line-height: 1;
+    line-height: 1.5em;
     font-family: 'Open Sans', sans-serif;
     min-width:993px;
     color:#484848;
-    font-size:1em;
+    font-size:0.9em;
+}
+h1{
+    font-family: 'Lobster', cursive;
+    color:#fb5151;
+    font-size: 37.5px;
+    margin-top: 75px;
+    margin-bottom: 21px;
 }
 ol, ul {
     list-style: none;
@@ -50,12 +71,12 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-/*-----HEADER-----*/
+
+/*-----Шапка-----*/
 header{
     margin-top: 30px;
     padding-bottom: 43px;
     border-bottom:1px solid #ecebea;
-    line-height: 1.5em;
 }
 .padding_block_top{
     padding-top: 43px;
@@ -69,7 +90,7 @@ a.knopka:hover{
 }
 .phone{
     color:#3b3b3b;
-    font-weight:bold;
+    font-weight: 500;
     font-size:1.3em;
     position:relative;
 }
@@ -79,5 +100,103 @@ a.knopka:hover{
     background: url("../images/phone.png");
     width:22px;
     height:22px;
+    left: -24px;
+    top: 3px;
 }
-/*--------------------*/
+/*----------------------*/
+/*-----Навигация-----*/
+.nav_fixed{
+    position: fixed;
+    z-index:1;
+    top:0px;
+    background: #fff;
+    width:100%;
+}
+nav ul{
+   width:100%;
+   padding: 0px 54px;
+}
+nav ul li{
+    float:left;
+    margin-right: 25px;
+    font-size: 1em;
+    padding: 30px 0px;
+}
+
+nav ul li:last-child{
+    margin-right: 0px;
+}
+
+nav ul li a{
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a:after {
+    display: block;
+    position: absolute;
+    top:49px;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background: #ff6d6d;
+    transition: width .3s ease-in-out;
+}
+
+a:hover{
+    color:#ff6d6d;
+}
+
+a:hover:after,
+a:focus:after{
+    width: 100%;
+    color: #ff6d6d;
+}
+
+/*-----Первый баннер-----*/
+
+.banner_1{
+    width:100%;
+    height:713px;
+    background:url("../images/banner.png") no-repeat;
+    background-size:cover;
+}
+.red_text{
+    color:#fb5151;
+}
+.u_nas{
+   margin-top: 45px;
+}
+.u_nas ul{
+    font-size: 12px;
+    padding: 5px 0px 60px 30px;
+}
+.u_nas ul li{
+    position:relative;
+}
+.u_nas ul li:before{
+    content:'';
+    position:absolute;
+    background: url("../images/circle.png");
+    width:9px;
+    height:8px;
+    top: 7px;
+    left: -16px;
+}
+.garant{
+    font-weight: bold;
+    position:relative;
+}
+.rast{
+    display:none;
+    height:81px;
+}
+.garant:after{
+    content:'';
+    position:absolute;
+    background: url("../images/garant.png");
+    width:25px;
+    height:32px;
+    top: -22px;
+    right: -28px;
+}
