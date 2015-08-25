@@ -25,17 +25,14 @@ footer, header, hgroup, menu, nav, section {
 }
 a{
     text-decoration: none;
-    font-size:1em;
     color:#737373;
 }
 a:link{
     text-decoration: none;
-    font-size:1em;
     color:#737373;
 }
 a:visited{
     text-decoration: none;
-    font-size:1em;
     color:#737373;
 }
 a:hover{
@@ -47,14 +44,14 @@ body {
     font-family: 'Open Sans', sans-serif;
     min-width:993px;
     color:#484848;
-    font-size:0.9em;
+    font-size:1em;
 }
 h1{
     font-family: 'Lobster', cursive;
     color:#fb5151;
-    font-size: 37.5px;
+    font-size: 42px;
     margin-top: 75px;
-    margin-bottom: 21px;
+    margin-bottom: 30px;
 }
 ol, ul {
     list-style: none;
@@ -124,7 +121,7 @@ nav{
 nav ul li{
     float:left;
     margin-right: 25px;
-    font-size: 1em;
+    font-size: 0.9em;
     padding: 30px 0px;
 }
 
@@ -140,7 +137,7 @@ nav ul li a{
 nav ul li a:after {
     display: block;
     position: absolute;
-    top:48px;
+    top:51px;
     content: "";
     height: 3px;
     width: 0%;
@@ -148,7 +145,7 @@ nav ul li a:after {
     transition: width .3s ease-in-out;
 }
 nav ul li .topA:after{
-    top:39px;
+    top:41px;
 }
 nav ul li a:hover{
     color:#ff6d6d;
@@ -183,7 +180,7 @@ nav ul li a:focus:after{
 
 .red_text{
     color:#fb5151;
-    font-weight:600;
+    font-weight:800;
 }
 .u_nas{
    margin-top: 45px;
@@ -220,11 +217,12 @@ nav ul li a:focus:after{
     width:25px;
     height:32px;
     top: -22px;
-    right: -28px;
+    right: -29px;
 }
 .form_banner_1{
     position:relative;
     background: rgba(255, 255, 255, 0.91);
+    padding-bottom: 36px
 }
 .form_banner_1:before{
     content: '' !important;
@@ -236,4 +234,11 @@ nav ul li a:focus:after{
     z-index: 99;
     width: 100%;
     top: -8px;
+}
+.blue_h{
+    text-align:center;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color:#48c8f3;
+    padding: 15px 0px;
 }
