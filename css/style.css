@@ -285,20 +285,22 @@ nav ul li a:focus:after{
     line-height: 1.4em;
     color:#48c8f3;
     padding: 15px 0px;
+
 }
 /*---Преемущества-----*/
-.preem{
+.preem {
     position:relative;
+    padding-bottom: 36px;
 }
 .preem:after{
-    position:absolute;
-    content:'';
+    position: absolute;
+    content: '';
     width: 100%;
-    height: 0;
-    border-left: 778px solid transparent;
-    border-right: 778px solid transparent;
-    border-top: 31px solid #fff;
-
+    height: 100px;
+    background: url("../images/gal_top_preem.png") no-repeat;
+    background-position-x: 50%;
+    bottom: -22px;
+    z-index: 4;
 }
 .preem li{
     margin-bottom: 40px;
@@ -336,22 +338,23 @@ nav ul li a:focus:after{
 }
 
 /*-----Формат-----*/
-.format:after{
-    position:absolute;
-    content:'';
-    width: 100%;
-    height: 0;
-    border-left: 778px solid transparent;
-    border-right: 778px solid transparent;
-    border-top: 31px solid #f2f2f2;
-
-}
 .format{
     background:#f2f2f2;
     padding-top: 31px;
     color:#737373;
     position: relative;
+    z-index:3;
 }
+/*.format:after{*/
+    /*position: absolute;*/
+    /*content: '';*/
+    /*width: 100%;*/
+    /*height: 100px;*/
+    /*background: url("../images/gal_top.png") no-repeat;*/
+    /*background-position-x: 50%;*/
+    /*bottom: -22px;*/
+    /*z-index: -1;*/
+/*}*/
 .block_format{
     background: #fff;
     padding: 28px 18px;
@@ -450,6 +453,48 @@ nav ul li a:focus:after{
     padding-top: 25px;
     padding-bottom: 60px;
 }
+/*Перезвоним*/
+
 .zvonok{
-    padding-top: 31px;
+    min-height: 400px;
+    position: relative;
+    z-index:0;
+}
+.zvonok:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100px;
+    background: url("../images/gal_bot.png") no-repeat;
+    background-position-x: 50%;
+    background-size: 100%;
+    bottom: -22px;
+    z-index: -1;
+}
+.format:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100px;
+    background: url("../images/gal_top.png") no-repeat;
+    background-position-x: 50%;
+    bottom: -22px;
+    z-index: -1;
+}
+.color_white{
+    color:#fff;
+}
+.zvonok .form-control{
+    color:#fff;
+    border-color: #fff;
+}
+.zvonok .form-control::-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+}
+.zvonok .form-control:-ms-input-placeholder {
+    color: #fff;
+}
+.zvonok .form-control::-webkit-input-placeholder {
+    color: #fff;
 }
