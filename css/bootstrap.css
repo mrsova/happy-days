@@ -2563,6 +2563,7 @@ output {
 .form-control {
     display: block;
     width: 100%;
+    background: none;
     padding: 13px 12px;
     font-size: 14px;
     color: #959595;

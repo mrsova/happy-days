@@ -23,6 +23,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+b{
+    font-weight: 600;
+}
 a{
     text-decoration: none;
     color:#737373;
@@ -46,12 +49,53 @@ body {
     color:#484848;
     font-size:1em;
 }
+h2{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
 h1{
+    margin-top: 75px;
+    margin-bottom: 30px;
     font-family: 'Lobster', cursive;
     color:#fb5151;
     font-size: 42px;
-    margin-top: 75px;
-    margin-bottom: 30px;
+}
+.head{
+    margin-top: 72px;
+    margin-bottom: 72px;
+    font-family: 'Lobster', cursive;
+    color:#4f4f4f;
+    font-size: 40px;
+    text-align: center;
+    line-height:1.2em;
+}
+.head b{
+    color:#fb5151;
+    font-weight: normal;
+}
+.head span{
+   position:relative;
+   display: inline-block;
+}
+.head span:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url("../images/section-title-bg.png");
+    width: 55px;
+    height: 3px;
+    top: 50%;
+    right: -96px;
+}
+.head span:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url("../images/section-title-bg.png");
+    width: 55px;
+    height: 3px;
+    top: 50%;
+    left: -96px;
 }
 ol, ul {
     list-style: none;
@@ -241,4 +285,171 @@ nav ul li a:focus:after{
     line-height: 1.4em;
     color:#48c8f3;
     padding: 15px 0px;
+}
+/*---Преемущества-----*/
+.preem{
+    position:relative;
+}
+.preem:after{
+    position:absolute;
+    content:'';
+    width: 100%;
+    height: 0;
+    border-left: 778px solid transparent;
+    border-right: 778px solid transparent;
+    border-top: 31px solid #fff;
+
+}
+.preem li{
+    margin-bottom: 40px;
+}
+.preem .row > div:first-child .fa{
+    color:#ff6d6d;
+    font-size: 2em;
+    float:left;
+}
+.preem .row > div:last-child .fa{
+    color:#ff6d6d;
+    font-size: 2em;
+    float:right;
+}
+
+.preem .row > div:first-child .info-box {
+    float: left;
+    margin-right: 30px;
+    text-align: right;
+}
+.preem .row > div:last-child .info-box {
+    float: right;
+    margin-left: 30px;
+    text-align: left;
+}
+.preem .row div .info-box {
+    width: 390px;
+    font-size: 13px;
+    color:#737373;
+    height: 100px;
+}
+.preem .row div .info-box h3{
+    color:#4f4f4f;
+    font-size: 1.41em;
+}
+
+/*-----Формат-----*/
+.format:after{
+    position:absolute;
+    content:'';
+    width: 100%;
+    height: 0;
+    border-left: 778px solid transparent;
+    border-right: 778px solid transparent;
+    border-top: 31px solid #f2f2f2;
+
+}
+.format{
+    background:#f2f2f2;
+    padding-top: 31px;
+    color:#737373;
+    position: relative;
+}
+.block_format{
+    background: #fff;
+    padding: 28px 18px;
+}
+.block_format .fa{
+    color:#ff6d6d;
+    font-size: 2em;
+}
+.block_format .fa:first-child{
+    float:left;
+}
+.block_format span{
+    float:left;
+    margin-left:10px;
+}
+
+.block_format .exc:before{
+    color: #ff6d6d;
+    content: '!' !important;
+    background: none !important;
+    font-size: 30px;
+}
+.block_format span h3{
+    line-height: 20px;
+    font-weight: 600;
+}
+.block_format span p{
+    color:#ff6d6d;
+    font-size: 12px;
+    line-height: 1;
+}
+.block_format .description{
+    font-size: 12px;
+    line-height: 17px;
+    height: 360px;
+}
+.block_format .description .item li:first-child{
+    padding-top: 9px;
+}
+.block_format .description .item li{
+    padding-top: 4px;
+}
+.block_format .description .name{
+    float: left;
+}
+.block_format .description .b{
+    font-weight: 600;
+    float: left;
+    width: 53%;
+    padding-left: 5px;
+}
+
+.block_format .description .item_li li{
+    position: relative;
+    padding: 6px 0px 3px 27px !important;
+}
+.block_format .description .item_li li:before{
+    content: '';
+    position: absolute;
+    background: url("../images/circle.png");
+    width: 9px;
+    height: 8px;
+    top: 11px;
+    left: 11px;
+}
+.block_format .zakaz{
+    margin-top: 47px;
+}
+.block_format .price{
+    color:#4f4f4f;
+    float: left;
+    margin-right:7px;
+    margin-top: 11px;
+}
+
+.block_format .but{
+    float: left;
+    width: 140px;
+}
+.block_format .but .btn{
+    padding:5px 0px !important;
+}
+
+.block_format li.priz{
+    color: #ff6d6d;
+    font-size: 18px;
+    margin-bottom: -24px;
+}
+
+.block_format li.priz:before{
+    content: '' !important;
+    background: none !important;
+}
+.toch_price{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 60px;
+}
+.zvonok{
+    padding-top: 31px;
 }
