@@ -45,9 +45,9 @@ a:hover{
 body {
     line-height: 1.5em;
     font-family: 'Open Sans', sans-serif;
-    min-width:993px;
+    min-width: 978px;
     color:#484848;
-    font-size:1em;
+    font-size:0.9em;
 }
 h2{
     text-align: center;
@@ -58,7 +58,7 @@ h1{
     margin-bottom: 30px;
     font-family: 'Lobster', cursive;
     color:#fb5151;
-    font-size: 42px;
+    font-size: 40px;
 }
 .head{
     margin-top: 72px;
@@ -85,7 +85,7 @@ h1{
     width: 55px;
     height: 3px;
     top: 50%;
-    right: -96px;
+    right: -77px;
 }
 .head span:before{
     content: '';
@@ -95,7 +95,7 @@ h1{
     width: 55px;
     height: 3px;
     top: 50%;
-    left: -96px;
+    left: -77px;
 }
 ol, ul {
     list-style: none;
@@ -181,7 +181,7 @@ nav ul li a{
 nav ul li a:after {
     display: block;
     position: absolute;
-    top:51px;
+    top:48px;
     content: "";
     height: 3px;
     width: 0%;
@@ -189,7 +189,7 @@ nav ul li a:after {
     transition: width .3s ease-in-out;
 }
 nav ul li .topA:after{
-    top:41px;
+    top:38px;
 }
 nav ul li a:hover{
     color:#ff6d6d;
@@ -266,7 +266,7 @@ nav ul li a:focus:after{
 .form_banner_1{
     position:relative;
     background: rgba(255, 255, 255, 0.91);
-    padding-bottom: 36px
+    padding-bottom: 70px
 }
 .form_banner_1:before{
     content: '' !important;
@@ -345,6 +345,16 @@ nav ul li a:focus:after{
     position: relative;
     z-index:3;
 }
+.format:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50px;
+    background: url("../images/gal_top.png") no-repeat;
+    background-position-x: 50%;
+    bottom: -30px;
+    z-index: -1;
+}
 .block_format{
     background: #fff;
     padding: 28px 18px;
@@ -379,7 +389,7 @@ nav ul li a:focus:after{
 .block_format .description{
     font-size: 12px;
     line-height: 17px;
-    height: 360px;
+    height: 395px;
 }
 .block_format .description .item li:first-child{
     padding-top: 9px;
@@ -443,23 +453,14 @@ nav ul li a:focus:after{
     padding-top: 25px;
     padding-bottom: 60px;
 }
-/*Перезвоним*/
 
+
+/*Перезвоним*/
 .zvonok{
     min-height: 500px;
     padding: 80px 0;
     z-index:0;
     background-size: cover;
-}
-.format:before{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 50px;
-    background: url("../images/gal_top.png") no-repeat;
-    background-position-x: 50%;
-    bottom: -30px;
-    z-index: -1;
 }
 .color_white{
     color:#fff;
@@ -478,10 +479,12 @@ nav ul li a:focus:after{
 .zvonok .form-control::-webkit-input-placeholder {
     color: #fff;
 }
-/*Аниматоры*/
 
+/*Аниматоры*/
 .animator{
     position:relative;
+    color:#7f7f7f;
+    background: #fff;
 }
 .animator:before{
     position: absolute;
@@ -494,3 +497,109 @@ nav ul li a:focus:after{
     top: -30px;
     z-index: -1;
 }
+p.text{
+    text-align: center;
+    margin-top: -55px;
+    font-size: 18px;
+}
+.animator_item{
+    position:relative;
+    background:#f2f2f2;
+    margin-top: 25px;
+    padding: 37px 16px;
+    -webkit-box-shadow: 0px 6px 14px 1px rgba(41, 50, 50, 0.39);
+    -moz-box-shadow:    0px 6px 14px 1px rgba(41, 50, 50, 0.39);
+    box-shadow:         0px 6px 14px 1px rgba(41, 50, 50, 0.39);
+
+}
+.animator_item ul li{
+    float:left;
+    text-align: center;
+    width:140px;
+    margin-right: 14px;
+}
+.animator_item ul li:last-child{
+    margin-right: 0px;
+}
+.animator_item ul li .img_block{
+    height: 100px;
+}
+.animator_item ul li .img_block img{
+}
+.animator_item h3{
+    text-align: left;
+    font-size: 30px;
+    padding-left: 33px;
+    padding-bottom: 35px;
+}
+.animator_item:before{
+    content: '';
+    position: absolute;
+    background: url("../images/kloun.png") no-repeat;
+    width: 241px;
+    height: 217px;
+    top: -190px;
+    left: 26px;
+}
+.animator_item:after{
+    content:'';
+    position: absolute;
+    background: url("../images/botinok.png") no-repeat;
+    width: 231px;
+    height: 180px;
+    right: -10px;
+    top: -130px;
+}
+
+/*Герои*/
+.heroes{
+    color:#7f7f7f;
+    font-size: 15px;
+    position: relative;
+    z-index:3;
+    padding-bottom: 40px;
+}
+.heroes:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50px;
+    background: url("../images/gal_top_preem.png") no-repeat;
+    background-position-x: 50%;
+    bottom: -30px;
+    z-index: -1;
+}
+.heroes_block{
+    margin-top: 70px;
+    text-align: center;
+    height: 500px;
+}
+.hero_item_img{
+    height:310px;
+}
+.hero_item_img img{
+    height: 100%;
+}
+.hero_description{
+    -webkit-box-shadow: -2px -13px 14px -12px rgba(50, 50, 50, 0.23);
+    -moz-box-shadow: -2px -13px 14px -12px rgba(50, 50, 50, 0.23);
+    box-shadow: -2px -13px 14px -12px rgba(50, 50, 50, 0.23);
+    margin-top: 18px;
+    padding-top: 15px;
+}
+.hero_description h3{
+    font-weight: bold;
+    font-size: 15px;
+    color: #4f4f4f;
+    padding-bottom: 10px;
+}
+.hero_description p{
+    font-size: 12px;
+}
+.hero_description a{
+    color:#ff6d6d;
+    display:inline-block;
+    padding-top: 10px;
+}
+
+
