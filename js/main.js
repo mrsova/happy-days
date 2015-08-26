@@ -22,6 +22,8 @@ $(document).ready(function(){
             $('nav ul li a').addClass('topA');
         }
     });
-
+    $('.parallax-window').parallax({
+        positionY: "top"
+    });
 
 });
