@@ -121,8 +121,8 @@
       zIndex: this.zIndex,
       position: 'fixed',
       top: 0,
-      left: 0,
-      overflow: 'hidden'
+      left: 0
+      //overflow: 'hidden'
     });
 
     this.$slider.addClass('parallax-slider').one('load', function() {
@@ -352,7 +352,7 @@
   // Parallax Data-API
 
   $(document).on('ready.px.parallax.data-api', function () {
-    $('[data-parallax="scroll"]').parallax();
+   $('[data-parallax="scroll"]').parallax();
   });
 
 }(jQuery, window, document));

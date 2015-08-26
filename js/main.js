@@ -76,17 +76,36 @@
         caption_bgcolor	: 'rgba(232, 101, 99, 0.92)',
         border			: false
     });
-    $(".none_programma").css('display','block');
+
     $(".none_programma").css('display','none');
+    $(".none_programma_d").css('display','none');
 
     $('.prosmotr_vse').click(function(event){
         event.preventDefault();
-        $(".none_programma").show();
+        $(".none_programma").css('display','block');
+        $(this).hide();
+    });
+
+    $('.deti').click(function(event){
+        event.preventDefault();
+        $(".none_programma_d").css('display','block');
         $(this).hide();
     });
 
     $('.parallax-window').parallax({
-        positionY: "top"
+       positionY: "top"
+    });
+
+
+    var owl = $("#owl-demo");
+
+    owl.owlCarousel({
+
+        items : 4,
+        navigation : true,
+        pagination : true,
+        navigationText:['','']
+
     });
 
 })(jQuery);
