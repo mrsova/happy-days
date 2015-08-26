@@ -601,5 +601,111 @@ p.text{
     display:inline-block;
     padding-top: 10px;
 }
+.info_text{
+    color: #fff;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+.info_text b{
+    color:#ff6d6d;
+}
 
+/*Стили для блоков с программами*/
+.ic_container{
+    position:relative;
+    cursor: pointer;
+}
+.overlay{
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+.ic_caption{
+    position:absolute;
+    overflow:hidden;
+    margin:0px;
+    padding:0px;
+    left:0px;
+    right:0px;
+    cursor:default;
+}
+.ic_caption h3{
+    font-size:18px;
+    text-align: center;
+    padding: 10px 0px;
+}
 
+.ic_text{
+    padding: 10px 23px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.ic_text a{
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 0px;
+    width: 80%;
+    margin-top: 25px;
+    border-radius: 4px;
+}
+
+.programma{
+    margin-top: 60px;
+}
+
+.programma_item{
+    margin-top: 30px;
+}
+
+.prosmotr_vse{
+    display: block;
+    background: transparent;
+    color: #ff6d6d !important;
+    border: 2px solid #ff6d6d;
+    padding: 10px 0px;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    text-align: center;
+}
+.none_programma{
+    /*display:none;*/
+}
+/*Программы для подростков*/
+.podrostok{
+    color:#7f7f7f;
+    position: relative;
+    z-index:3;
+    background: #fff;
+    padding-bottom: 60px;
+
+}
+.podrostok:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50px;
+    background: url("../images/gal_top_preem.png") no-repeat;
+    background-position-x: 50%;
+    bottom: -30px;
+    z-index: -1;
+}
+.podrostok:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50px;
+    background: url("../images/gal_bot.png") no-repeat;
+    background-position-x: 50%;
+    top: -26px;
+    z-index: -1;
+}
