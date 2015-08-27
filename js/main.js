@@ -53,6 +53,15 @@
     };
 
     /*-----------------------------------*/
+
+    $('nav ul li a').click(function () {
+        event.preventDefault();
+        $('nav ul li a').removeClass('under_link');
+        $(this).addClass('under_link');
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+    });
+
     $(window).scroll(function () {
 
         /*Меню*/
@@ -79,72 +88,78 @@
 
         /*Плавные якори*/
 
-        $('nav ul li a').click(function () {
-            event.preventDefault();
-            $('nav ul li a').removeClass('under_link');
-            $(this).addClass('under_link');
-            var target = $(this).attr('href');
-            $('html, body').animate({scrollTop: $(target).offset().top}, 800);
-        });
+
+
 
         /*Анимации*/
-        $('.preem_left').each(function () {
-            var imagePos = $(this).offset().top;
+        var delay = 0;
+
+        function animated(element,animation,del,delay){
+            var imagePos = element.offset().top;
             var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
-                $(this).addClass("animated fadeInLeft");
-                $(this).css("visibility", "visible");
+            if (imagePos < topOfWindow+400) {
+                if(del == "yes"){
+                    setTimeout(function(){
+                        element.addClass(animation);
+                        element.addClass("animated");
+                        element.css("visibility", "visible");
+                    },500-delay);
+                    console.log(delay);
+                }else{
+                    element.addClass(animation);
+                    element.addClass("animated");
+                    element.css("visibility", "visible");
+                }
+            }
+        }
+
+        $('.preem_left li').each(function () {
+            var el = $(this);
+            animated(el,"fadeInLeft");
+        });
+
+        $('.preem_right li').each(function () {
+            var el = $(this);
+            animated(el,"fadeInRight");
+        });
+
+        $('.b_f').each(function (index) {
+            var el = $(this);
+            animated(el,"slideInLeft","yes",delay);
+            if(index == 0){
+                delay = 200;
+            }
+            if(index == 1){
+                delay = 300;
+            }
+            if(index == 2){
+                delay = 500;
             }
         });
 
-        $('.preem_right').each(function () {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
-                $(this).addClass("animated fadeInRight");
-                $(this).css("visibility", "visible");
+        $('.block_rabota_item').each(function (index) {
+            var el = $(this);
+            if(index == 0){
+                delay = 200;
             }
+            if(index == 1){
+                delay = 300;
+            }
+            if(index == 2){
+                delay = 400;
+            }
+            if(index == 3){
+                delay = 500;
+            }
+            animated(el,"slideInLeft","yes",delay);
+
         });
 
-        $('.b_f').each(function () {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
-                $(this).addClass("animated fadeInLeft");
-                $(this).css("visibility", "visible");
-            }
-        });
-        $('.b_f_c').each(function () {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
-                $(this).addClass("animated fadeInRight");
-                $(this).css("visibility", "visible");
-            }
-        });
-
-        $('.head').each(function () {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
-                $(this).addClass("animated slideInLeft");
-                $(this).css("visibility", "visible");
-            }
-        });
-
-        $('.block_rabota_item').each(function () {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
-                $(this).addClass("animated slideInLeft");
-                $(this).css("visibility", "visible");
-            }
-        });
 
         $('.pos_1 .details_content').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
+            if (imagePos < topOfWindow+400) {
                 $(this).addClass("animated slideInRight");
                 $(this).css("visibility", "visible");
             }
@@ -153,7 +168,7 @@
         $('.pos_1 .o_img').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
+            if (imagePos < topOfWindow+400) {
                 $(this).addClass("animated slideInLeft");
                 $(this).css("visibility", "visible");
             }
@@ -162,7 +177,7 @@
         $('.pos_2 .details_content').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
+            if (imagePos < topOfWindow+400) {
                 $(this).addClass("animated slideInLeft");
                 $(this).css("visibility", "visible");
             }
@@ -171,7 +186,7 @@
         $('.pos_2 .o_img').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
+            if (imagePos < topOfWindow+400) {
                 $(this).addClass("animated slideInRight");
                 $(this).css("visibility", "visible");
             }
@@ -218,6 +233,14 @@
         navigationText: ['', '']
 
     });
+    var heim = 0;
+    $(".block_format .description").each(function (){
+        var height = $(this).innerHeight();
+        if(height>heim){
+            heim = height;
+        }
+    });
+    $(".block_format .description").css('height',heim);
 
 })(jQuery);
 

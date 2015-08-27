@@ -50,11 +50,11 @@ a:hover {
 }
 
 body {
-    line-height: 1.5em;
+    line-height: 21px;
     font-family: 'Open Sans', sans-serif;
     min-width: 978px;
     color: #484848;
-    font-size: 0.9em;
+    font-size: 15px;
 }
 
 @media screen and (max-width: 1161px) {
@@ -87,8 +87,7 @@ h1 {
     color: #4f4f4f;
     font-size: 40px;
     text-align: center;
-    line-height: 1.2em;
-    visibility: hidden;
+    line-height: 44px;
 }
 
 .head b {
@@ -459,7 +458,7 @@ nav ul li a:focus:after {
 .block_format .description {
     font-size: 12px;
     line-height: 17px;
-    height: 395px;
+
 }
 
 .block_format .description .item li:first-child {
@@ -503,8 +502,8 @@ nav ul li a:focus:after {
 .block_format .price {
     color: #4f4f4f;
     float: left;
-    margin-right: 7px;
-    margin-top: 11px;
+    margin-right: 5px;
+    margin-top: 10px;
 }
 
 .block_format .but {
@@ -1075,6 +1074,7 @@ p.text {
 
 .sotrudnik p {
     font-size: 12px;
+    line-height: 18px;
 }
 
 .sotrudnik img, .otziv img {
