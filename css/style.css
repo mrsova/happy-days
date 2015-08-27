@@ -52,14 +52,18 @@ a:hover {
 body {
     line-height: 21px;
     font-family: 'Open Sans', sans-serif;
-    min-width: 978px;
+    min-width: 1008px;
+    width:100%;
     color: #484848;
     font-size: 15px;
 }
 
-@media screen and (max-width: 1161px) {
+@media screen and (max-width: 1008px) {
     .parallax-mirror {
         overflow: hidden;
+    }
+    body {
+       min-width: 1008px;
     }
 
     .slide {
@@ -476,7 +480,7 @@ nav ul li a:focus:after {
 .block_format .description .b {
     font-weight: 600;
     float: left;
-    width: 53%;
+    width: 52%;
     padding-left: 5px;
 }
 
@@ -494,9 +498,11 @@ nav ul li a:focus:after {
     top: 11px;
     left: 11px;
 }
-
+.block_format .description{
+    height:430px;
+}
 .block_format .zakaz {
-    margin-top: 47px;
+    padding-top: 47px;
 }
 
 .block_format .price {
@@ -518,7 +524,6 @@ nav ul li a:focus:after {
 .block_format li.priz {
     color: #ff6d6d;
     font-size: 18px;
-    margin-bottom: -24px;
 }
 
 .block_format li.priz:before {
@@ -584,7 +589,7 @@ nav ul li a:focus:after {
 p.text {
     text-align: center;
     margin-top: -55px;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .animator_item {
