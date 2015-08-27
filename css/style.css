@@ -49,6 +49,14 @@ body {
     color:#484848;
     font-size:0.9em;
 }
+@media screen and (max-width: 1161px) {
+    .parallax-mirror{
+        overflow:hidden;
+    }
+    .slide{
+        /*overflow:hidden;*/
+    }
+}
 h2{
     text-align: center;
     font-family: 'Lobster', cursive;
@@ -70,7 +78,7 @@ h1{
     line-height:1.2em;
 }
 .head b{
-    color:#fb5151;
+    color: #ff6d6d;
     font-weight: normal;
 }
 .head span{
@@ -510,6 +518,7 @@ p.text{
     -webkit-box-shadow: 0px 6px 14px 1px rgba(41, 50, 50, 0.39);
     -moz-box-shadow:    0px 6px 14px 1px rgba(41, 50, 50, 0.39);
     box-shadow:         0px 6px 14px 1px rgba(41, 50, 50, 0.39);
+    z-index: 99;
 
 }
 .animator_item ul li{
@@ -665,7 +674,7 @@ p.text{
     margin-top: 30px;
 }
 
-.prosmotr_vse{
+.prosmotr_vse, .deti{
     display: block;
     background: transparent;
     color: #ff6d6d !important;
@@ -678,6 +687,7 @@ p.text{
     border-radius: 4px;
     text-align: center;
 }
+
 .none_programma{
     /*display:none;*/
 }
@@ -711,13 +721,16 @@ p.text{
     z-index: -1;
     background-size: cover;
 }
-/*Слайдер*/
 
+
+
+/*Слайдер*/
 .slide{
     background: #f2f2f2;
     color:#7f7f7f;
     padding-bottom: 160px;
     position:relative;
+    width: 100%;
 }
 .slide:after{
     position: absolute;
@@ -730,14 +743,6 @@ p.text{
     z-index: -1;
 }
 
-
-
-/*
- * 	Core Owl Carousel CSS File
- *	v1.3.3
- */
-
-/* clearfix */
 .owl-carousel .owl-wrapper:after {
     content: ".";
     display: block;
@@ -795,6 +800,7 @@ p.text{
     width:222px !important;
     margin-left: 22px;
 }
+
 .owl-carousel .owl-wrapper{
     display: none;
     position: relative;
@@ -850,7 +856,6 @@ p.text{
     bottom: 127px;
     right: -72px;
 }
-/* fix */
 .owl-carousel  .owl-wrapper,
 .owl-carousel  .owl-item{
     -webkit-backface-visibility: hidden;
@@ -861,3 +866,174 @@ p.text{
     -ms-transform: translate3d(0,0,0);
 }
 
+/* Как мы работаем */
+.block_rabota_item{
+    text-align: center;
+    color:#fff;
+}
+.block_rabota_item .fa{
+    font-size: 4em;
+}
+.block_rabota .info_text{
+    margin-top: 75px !important;
+}
+.block_rabota_item h3{
+    color:#ff6d6d;
+    font-size: 18px;
+    padding: 25px 0px;
+    position:relative;
+}
+.block_rabota_item h3:after{
+    content: '';
+    position: absolute;
+    width: 54px;
+    height: 1px;
+    border-bottom: 1px solid #fff;
+    bottom: 10px;
+    left: 37%;
+}
+.block_rabota{
+    padding-bottom: 145px;
+}
+/*Команда*/
+.komandos{
+    position:relative;
+    background: #fff;
+    color:#737373;
+}
+.komandos:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50px;
+    background: url("../images/gal_top_preem.png") no-repeat;
+    background-position-x: 50%;
+    bottom: -26px;
+    z-index: 3;
+    background-size: cover;
+}
+.komandos:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50px;
+    background: url("../images/gal_top_preem.png") no-repeat;
+    background-position-x: 50%;
+    top: -32px;
+    z-index: -1;
+    background-size: cover;
+}
+.sotrudnik{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.sotrudnik h3{
+    color: #4f4f4f;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 0px;
+}
+.sotrudnik span{
+    color: #ff6d6d;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.sotrudnik p{
+    font-size: 12px;
+}
+
+.sotrudnik img, .otziv img{
+    width:222px;
+    height:222px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    transition: all .3s ease-out .1s
+}
+.sotrudnik:hover img{
+    border-color:#ff6d6d;
+}
+/*Отзывы*/
+.otziv{
+    background: #f2f2f2;
+    color:#737373;
+    position: relative;
+}
+
+.otziv li{
+    position: relative;
+    margin-bottom: 50px;
+    background-image: url("../images/ot_icon.png");
+    background-position: 45% top;
+    background-repeat: no-repeat, repeat-y;
+}
+.otziv img:hover{
+    border-color:#ff6d6d;
+}
+.otziv .details_content{
+    background: #fff;
+}
+.pos_1 .details_content{
+    text-align: right;
+}
+.pos_2 .details_content{
+    text-align: left;
+}
+.pos_2{
+    text-align: right;
+}
+.details_content{
+    padding: 20px 30px;
+    width: 365px;
+}
+.details_content h3{
+    color: #4f4f4f;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.details_content p{
+    font-size: 11.4145678974px;
+}
+.o_img{
+    width: 365px;
+}
+.details_content span{
+    color:#ff6d6d;
+    display:inline-block;
+    padding-top: 5px;
+}
+
+/*Подвал*/
+
+.footer{
+    background: #4f4f4f;
+    color:#fff;
+    padding: 40px;
+}
+.footer h2{
+    margin-top: 10px;
+}
+.footer a{
+    color:#fff;
+}
+.footer .form-control{
+    color:#fff;
+    border-color: #fff;
+}
+.footer .form-control::-moz-placeholder {
+    color:#fff;
+     opacity: 1;
+ }
+.footer .form-control:-ms-input-placeholder {
+    color:#fff;
+}
+.footer .form-control::-webkit-input-placeholder {
+    color:#fff;
+}
+hr{
+    padding: 0;
+    margin: 0;
+    border-top:2px solid #8a8a8a;
+}

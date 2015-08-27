@@ -93,9 +93,9 @@
     });
 
     $('.parallax-window').parallax({
-       positionY: "top"
+       positionY: "top",
+       naturalWidth:'100%'
     });
-
 
     var owl = $("#owl-demo");
 
