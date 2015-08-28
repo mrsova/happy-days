@@ -52,8 +52,6 @@ a:hover {
 body {
     line-height: 21px;
     font-family: 'Open Sans', sans-serif;
-    min-width: 1008px;
-    width:100%;
     color: #484848;
     font-size: 15px;
 }
@@ -66,11 +64,16 @@ body {
        min-width: 1008px;
     }
 
-    .slide {
-        /*overflow:hidden;*/
+}
+@media screen and (max-width: 1091px) {
+    .owl-prev{
+        display:none;
+    }
+
+    .owl-next {
+        display:none;
     }
 }
-
 h2 {
     text-align: center;
     font-family: 'Lobster', cursive;
@@ -947,7 +950,7 @@ figure.effect-julia img {
 
 .owl-item {
     width: 222px !important;
-    margin-left: 22px;
+    margin-right: 30px;
 }
 
 .owl-carousel .owl-wrapper {
@@ -1217,7 +1220,8 @@ figure.effect-julia img {
 .footer {
     background: #4f4f4f;
     color: #fff;
-    padding: 40px;
+    padding-top:40px;
+    padding-bottom: 40px;
 }
 
 .footer h2 {
@@ -1326,3 +1330,72 @@ hr {
     color: #fff !important;
 }
 
+/*Модальные окна*/
+/*--------------------------------------------------
+	FORM MODAL
+-------------------------------------------------- */
+.reveal-modal-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    background: rgba(0,0,0,.8);
+    z-index: 100;
+    display: none;
+    top: 0;
+    left: 0;
+}
+.reveal-modal {
+    display:table;
+    visibility: hidden;
+    top: 50%;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    z-index: 101;
+}
+/* ячейка блочной таблицы */
+.dm-cell {
+    display: table-cell;
+    padding: 0 1em;
+    vertical-align: middle;
+    text-align: center;
+    left: 50%;
+    position: absolute;
+    z-index: 102;
+}
+
+/* модальный блок с формой */
+.dm-modal {
+    display: inline-block;
+    padding: 30px;
+    background: #fff;
+    position: relative;
+    text-align: left;
+}
+.close-reveal-modal{
+    cursor:pointer;
+}
+
+.reveal-modal .close-reveal-modal:after {
+    font-size: 22px;
+    line-height: .5;
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    color: #aaa;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.reveal-modal .close-reveal-modal:after {
+    position: absolute;
+    content: '';
+    width: 33px;
+    height: 34px;
+    background: url("../images/close_form.png");
+    top: -18px;
+}
+.form_style{
+
+}

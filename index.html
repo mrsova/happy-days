@@ -42,22 +42,25 @@
 
 <!--Навигация-->
 <div class="rast"></div>
-<nav class="nav">
+<section class="navigation">
+    <nav class="nav">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <ul>
-                    <li><a href="#preem">О НАС</a></li>
-                    <li><a href="#animator">АНИМАТОРЫ ДЛЯ ДЕТЕЙ</a></li>
-                    <li><a href="#podrostok">ПРОГРАММЫ ДЛЯ ПОДРОСТКОВ</a></li>
-                    <li><a href="#childern">ШОУ ДЛЯ ДЕТЕЙ</a></li>
-                    <li><a href="#komandos">НАША КОМАНДА</a></li>
-                    <li><a href="#otziv">ОТЗЫВЫ</a></li>
-                </ul>
+
+                    <ul>
+                        <li><a href="#preem">О НАС</a></li>
+                        <li><a href="#animator">АНИМАТОРЫ ДЛЯ ДЕТЕЙ</a></li>
+                        <li><a href="#podrostok">ПРОГРАММЫ ДЛЯ ПОДРОСТКОВ</a></li>
+                        <li><a href="#childern">ШОУ ДЛЯ ДЕТЕЙ</a></li>
+                        <li><a href="#komandos">НАША КОМАНДА</a></li>
+                        <li><a href="#otziv">ОТЗЫВЫ</a></li>
+                    </ul>
             </div>
         </div>
     </div>
-</nav>
+    </nav>
+</section>
 
 <!--Первый баннер-->
 <section class="banner_1" id="banner_1">
@@ -2095,7 +2098,7 @@
                     <input type="phone" class="form-control" id="exampleInputPassword45461" placeholder="Ваш телефон *">
                 </div>
                 <div class="col-md-4">
-                    <button type="submit" class="btn button--isi">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
+                    <button type="submit" class="btn button--isi" data-reveal-id="myModal2">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
                 </div>
             </form>
         </div>
@@ -2127,9 +2130,27 @@
         </div>
     </div>
 </footer>
+<!--Тест-->
+<div id="myModal2" class="reveal-modal">
+    <div class="dm-cell">
+        <div class="dm-modal">
+            <form id="ras_sv" class="form_style">
+                <h2>Оставьте заявку</h2>
+                <input type="text" name="name" placeholder="Имя *"/>
+                <input type="text" name="email" placeholder="E-mail *"/>
+                <input type="hidden" name="name_form" value="Свяжитесь со мной для расчетов"/>
+                <input type="hidden" name="id_form" value="two"/>
+                <a href="#" id="submit_two" class="submit_form">Отправить запрос</a>
+                <p class="pole">* - Поля обязательны к заполнению !</p>
+            </form>
+            <a class="close-reveal-modal"></a>
+        </div>
+    </div>
+</div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/parallax.js"></script>
 <script src="js/main.js"></script>
