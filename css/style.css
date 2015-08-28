@@ -52,14 +52,18 @@ a:hover {
 body {
     line-height: 21px;
     font-family: 'Open Sans', sans-serif;
-    min-width: 978px;
+    min-width: 1008px;
+    width:100%;
     color: #484848;
     font-size: 15px;
 }
 
-@media screen and (max-width: 1161px) {
+@media screen and (max-width: 1008px) {
     .parallax-mirror {
         overflow: hidden;
+    }
+    body {
+       min-width: 1008px;
     }
 
     .slide {
@@ -90,14 +94,11 @@ h1 {
     line-height: 44px;
 }
 
-.head b {
-    color: #ff6d6d;
-    font-weight: normal;
-}
-
 .head span {
     position: relative;
     display: inline-block;
+    color: #ff6d6d;
+    font-weight: normal;
 }
 
 .head span:after {
@@ -476,7 +477,7 @@ nav ul li a:focus:after {
 .block_format .description .b {
     font-weight: 600;
     float: left;
-    width: 53%;
+    width: 52%;
     padding-left: 5px;
 }
 
@@ -494,9 +495,11 @@ nav ul li a:focus:after {
     top: 11px;
     left: 11px;
 }
-
+.block_format .description{
+    height:430px;
+}
 .block_format .zakaz {
-    margin-top: 47px;
+    padding-top: 47px;
 }
 
 .block_format .price {
@@ -518,7 +521,6 @@ nav ul li a:focus:after {
 .block_format li.priz {
     color: #ff6d6d;
     font-size: 18px;
-    margin-bottom: -24px;
 }
 
 .block_format li.priz:before {
@@ -584,7 +586,7 @@ nav ul li a:focus:after {
 p.text {
     text-align: center;
     margin-top: -55px;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .animator_item {
@@ -669,6 +671,7 @@ p.text {
     margin-top: 70px;
     text-align: center;
     height: 500px;
+    visibility: hidden;
 }
 
 .hero_item_img {
@@ -878,9 +881,42 @@ p.text {
 }
 
 .owl-carousel .block {
+    box-sizing: border-box;
     background: #fff;
-    border: 6px solid #fff;
-    transition: all 0.5s;
+    padding:5px;
+    border: 1px solid #fff;
+    transition: border .3s ease-in .1s;
+    -moz-transition: border .3s ease-in .1s;
+    -ms-transition: border .3s ease-in .1s;
+}
+
+#owl-demo .block:hover {
+    border: 1px solid #ff6d6d;
+
+}
+figure{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+figure.effect-julia {
+    background: #ff6d6d;
+    height: 140px;
+}
+
+figure.effect-julia img {
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+.block:hover img {
+    opacity: 0.4;
+    transform: scale(1.5) rotate(10deg);
+    -moz-transform: scale(1.5) rotate(10deg);
+    -ms-transform: scale(1.5) rotate(10deg);
 }
 
 .owl-carousel .images img {
@@ -1267,7 +1303,3 @@ hr {
     color: #fff !important;
 }
 
-#owl-demo .block:hover {
-    border: 6px solid #ff6d6d;
-
-}

@@ -85,26 +85,18 @@
             }, 50);
             $('nav ul li a').addClass('topA');
         }
-
-        /*Плавные якори*/
-
-
-
-
         /*Анимации*/
         var delay = 0;
-
         function animated(element,animation,del,delay){
             var imagePos = element.offset().top;
             var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow+400) {
+            if (imagePos < topOfWindow+600) {
                 if(del == "yes"){
                     setTimeout(function(){
                         element.addClass(animation);
                         element.addClass("animated");
                         element.css("visibility", "visible");
                     },500-delay);
-                    console.log(delay);
                 }else{
                     element.addClass(animation);
                     element.addClass("animated");
@@ -125,7 +117,6 @@
 
         $('.b_f').each(function (index) {
             var el = $(this);
-            animated(el,"slideInLeft","yes",delay);
             if(index == 0){
                 delay = 200;
             }
@@ -135,6 +126,7 @@
             if(index == 2){
                 delay = 500;
             }
+            animated(el,"slideInLeft","yes",delay);
         });
 
         $('.block_rabota_item').each(function (index) {
@@ -155,41 +147,33 @@
 
         });
 
-
         $('.pos_1 .details_content').each(function () {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow+400) {
-                $(this).addClass("animated slideInRight");
-                $(this).css("visibility", "visible");
-            }
+            var el = $(this);
+            animated(el,"slideInRight");
         });
 
         $('.pos_1 .o_img').each(function () {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow+400) {
-                $(this).addClass("animated slideInLeft");
-                $(this).css("visibility", "visible");
-            }
+            var el = $(this);
+            animated(el,"slideInLeft");
         });
 
         $('.pos_2 .details_content').each(function () {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow+400) {
-                $(this).addClass("animated slideInLeft");
-                $(this).css("visibility", "visible");
-            }
+            var el = $(this);
+            animated(el,"slideInLeft");
         });
 
         $('.pos_2 .o_img').each(function () {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow+400) {
-                $(this).addClass("animated slideInRight");
-                $(this).css("visibility", "visible");
-            }
+            var el = $(this);
+            animated(el,"slideInRight");
+        });
+
+        $('.heroes_block').each(function () {
+            var el = $(this);
+            animated(el,"slideInLeft");
+        });
+        $('.programma_item').each(function () {
+            var el = $(this);
+            animated(el,"pulse");
         });
     });
 
@@ -234,13 +218,8 @@
 
     });
     var heim = 0;
-    $(".block_format .description").each(function (){
-        var height = $(this).innerHeight();
-        if(height>heim){
-            heim = height;
-        }
-    });
-    $(".block_format .description").css('height',heim);
+
+
 
 })(jQuery);
 
