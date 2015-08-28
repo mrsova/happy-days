@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Happy Days</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic' rel='stylesheet'
-          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type='text/css'>
@@ -33,7 +32,7 @@
                     Есть вопросы? Звоните!<br/>
                     <span class="phone">+7 (499) 390-49-00</span>
                     <br/>
-                    или <a class="knopka" href="#">ЗАКАЖИТЕ ЗВОНОК</a>
+                    или <a class="knopka" href="#" data-reveal-id="myModal2">ЗАКАЖИТЕ ЗВОНОК</a>
                 </span>
             </div>
         </div>
@@ -67,6 +66,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
+                <img src="images/klouni.png" alt="" style="position:absolute; left: -190px;"/>
             </div>
             <div class="col-md-6">
                 <h1>Яркие Детские Праздники</h1>
@@ -495,6 +495,7 @@
                 </p>
             </div>
         </div>
+        <br/> <br/>
         <div class="row">
             <!---->
             <div class="col-md-3">
@@ -1163,7 +1164,7 @@
             <div class="col-md-12">
                 <h2 class="head">
                     <span>
-                        Программы для Подростков
+                        Программы для подростков
                     </span>
                 </h2>
 
@@ -1191,7 +1192,7 @@
                             Эти персонажи с удовольствием придут
                             с Новогодней сказкой к вам домой
                             и поздравят детей.
-                            <a href="#" class="btn button--isi">УЗНАТЬ ПОДРОБНЕЕ</a>
+                            <a href="#" class="btn button--isi" data-reveal-id="myModal3">УЗНАТЬ ПОДРОБНЕЕ</a>
                         </p>
 
                     </div>
@@ -2098,7 +2099,7 @@
                     <input type="phone" class="form-control" id="exampleInputPassword45461" placeholder="Ваш телефон *">
                 </div>
                 <div class="col-md-4">
-                    <button type="submit" class="btn button--isi" data-reveal-id="myModal2">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
+                    <button type="submit" class="btn button--isi">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
                 </div>
             </form>
         </div>
@@ -2130,18 +2131,60 @@
         </div>
     </div>
 </footer>
+
 <!--Тест-->
 <div id="myModal2" class="reveal-modal">
     <div class="dm-cell">
         <div class="dm-modal">
-            <form id="ras_sv" class="form_style">
+            <form class="ras_sv form_style">
                 <h2>Оставьте заявку</h2>
+                <p>
+                    И НАШ МЕНЕДЖЕР СВЯЖЕТСЯ С ВАМИ<br/>
+                    В ТЕЧЕНИЕ 10 МИНУТ
+                </p>
                 <input type="text" name="name" placeholder="Имя *"/>
                 <input type="text" name="email" placeholder="E-mail *"/>
-                <input type="hidden" name="name_form" value="Свяжитесь со мной для расчетов"/>
-                <input type="hidden" name="id_form" value="two"/>
-                <a href="#" id="submit_two" class="submit_form">Отправить запрос</a>
-                <p class="pole">* - Поля обязательны к заполнению !</p>
+
+
+                <button type="submit" class="btn button--isi">ПЕРЕЗВОНИТЕ МНЕ</button>
+            </form>
+            <a class="close-reveal-modal"></a>
+        </div>
+    </div>
+</div>
+
+<!--Тест2-->
+<div id="myModal3" class="reveal-modal">
+    <div class="dm-cell new_modal">
+        <div class="dm-modal">
+            <form class="form_style">
+                <div class="pop_left">
+
+                </div>
+                <div class="pop_right">
+                    <h2>Шоу веселая наука</h2>
+                    Программа с сухим льдом:
+                    <ul>
+                        <li>Ознакомление со льдом</li>
+                        <li>Мыльная змея (из колбы вылезает бесконечная мыльная змея)</li>
+                        <li>Вкус лимонада</li>
+                        <li>Изготовление и исчезновение чернил</li>
+                        <li>Водородный взрыв</li>
+                        <li>Вулкан</li>
+                        <li>Дымовуха. Дети утопают в тумане, купаются в нем</li>
+                        <li>Замораживание шарика и резины</li>
+                        <li>Изготовление сталакита и другое.</li>
+                        <li>Замораживание розы и разбивание ее на мелкие кусочки</li>
+                    </ul>
+
+                </div>
+            <div class="clearfix"></div>
+                <p>
+                    РАССЧИТАЙТЕ СТОИМОСТЬ ВАШЕГО ПРАЗДНИКА
+                </p>
+
+                <input type="text" name="name" placeholder="Ваш телефон *"/>
+                <button type="submit" class="btn button--isi">УЗНАТЬ СТОИМОСТЬ</button>
             </form>
             <a class="close-reveal-modal"></a>
         </div>

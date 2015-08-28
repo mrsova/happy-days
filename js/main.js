@@ -60,19 +60,26 @@
     });
 
     /*--------------------------------------*/
-    $('button[data-reveal-id]').on('click', function(event) {
+    $('button[data-reveal-id], a[data-reveal-id]').on('click', function(event) {
         event.preventDefault();
+
         var model_left = $(".reveal-modal .dm-cell").innerWidth();
         $(".reveal-modal .dm-cell").css({"margin-left":-model_left/2});
+
+
+
         var modalLocation = $(this).attr('data-reveal-id');
         $('#'+modalLocation).reveal($(this).data());
     });
+    var model_lef = $(".reveal-modal .new_modal").innerWidth();
+    $(".reveal-modal .new_modal").css({"margin-left":-model_lef/2});
+
     $.fn.reveal = function(options) {
         var defaults = {
-            animation: 'fadeAndPop', //fade, fadeAndPop, none
-            animationspeed: 300, //how fast animtions are
-            closeonbackgroundclick: true, //if you click background will modal close?
-            dismissmodalclass: 'close-reveal-modal' //the class of a button or element that will close an open modal
+            animation: 'fadeAndPop',
+            animationspeed: 300,
+            closeonbackgroundclick: true,
+            dismissmodalclass: 'close-reveal-modal'
         };
 
         var options = $.extend({}, defaults, options);
@@ -108,6 +115,7 @@
                             });
                             return false;
                         });
+                        $('.form_style .button--isi').css({'transition':'all 0.5s'});
                     }
                     if(options.animation == "fade") {
                         modal.css({'opacity' : 0, 'visibility' : 'visible', 'top': $(document).scrollTop()+topMeasure});
@@ -125,6 +133,7 @@
                 }
                 modal.unbind('reveal:open');
             });
+
             modal.bind('reveal:close', function () {
                 if(!locked) {
                     lockModal();
@@ -137,7 +146,8 @@
                             modal.css({'top':topMeasure, 'opacity' : 1, 'visibility' : 'hidden'});
                             unlockModal();
                         });
-                        $('.reveal-modal').css({'top':'50%'})
+                        $('.reveal-modal').css({'top':'50%'});
+                        $('.form_style .button--isi').css({'transition-property':'none'});
                     }
                     if(options.animation == "fade") {
                         modalBG.delay(options.animationspeed).fadeOut(options.animationspeed);
@@ -175,12 +185,15 @@
             function lockModal() {
                 locked = true;
             }
+        });
+    }
 
-        });//each call
-    }//orbit plugin call
 
-    /*Обработка первой формы*/
-   /* function ajaxFormOne() {
+    $('button').on('click', function(event) {
+        event.preventDefault();
+    });
+
+    /*function ajaxFormOne() {
         var dataform = $("#ras_price").serialize();
         dataform = dataform;
         $.ajax({
@@ -211,13 +224,12 @@
                 }
             }
         });
-    }
+    }*/
 
-
-    $("#submit_one").click(function (event) {
+    $("#myModal2 button").click(function (event) {
         event.preventDefault();
-        ajaxFormOne();
-    });*/
+        //ajaxFormOne();
+    });
 
     /*---------------------------------------*/
 
@@ -336,14 +348,15 @@
             animated(el,"slideInRight");
         });
 
-        $('.heroes_block').each(function () {
+        $('.heroes_block').each(function (index) {
             var el = $(this);
-            animated(el,"slideInLeft");
+            animated(el,"fadeIn");
         });
-        $('.programma_item').each(function () {
+
+        /*$('.programma_item').each(function () {
             var el = $(this);
             animated(el,"pulse");
-        });
+        });*/
     });
 
     /*Показать подробнее*/

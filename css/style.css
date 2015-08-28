@@ -89,7 +89,7 @@ h1 {
 
 .head {
     margin-top: 72px;
-    margin-bottom: 72px;
+    margin-bottom: 73px;
     font-family: 'Lobster', cursive;
     color: #4f4f4f;
     font-size: 40px;
@@ -157,12 +157,12 @@ header {
 }
 
 a.knopka {
-    color: #fb5151;
+    color: #ff6d6d;
     font-size: 0.9em;
 }
 
 a.knopka:hover {
-    color: #ff6d6d;
+    color: #fb5151;
 }
 
 .phone {
@@ -186,7 +186,7 @@ a.knopka:hover {
 /*-----Навигация-----*/
 .nav_fixed {
     position: fixed;
-    z-index: 9999;
+    z-index: 111;
     top: 0px;
     background: #fff;
     width: 100%;
@@ -208,8 +208,8 @@ nav {
 
 nav ul li {
     float: left;
-    margin-right: 25px;
-    font-size: 0.9em;
+    margin-right: 3px;
+    font-size: 0.88em;
     padding: 30px 0px;
 }
 
@@ -220,6 +220,7 @@ nav ul li:last-child {
 nav ul li a {
     display: inline-block;
     position: relative;
+    padding: 0 11px;
 }
 
 nav ul li a:after {
@@ -229,8 +230,11 @@ nav ul li a:after {
     content: "";
     height: 3px;
     width: 0%;
+    left: 0px;
     background: #ff6d6d;
     transition: width .3s ease-in-out;
+
+
 }
 
 nav ul li .topA:after {
@@ -321,7 +325,8 @@ nav ul li a:focus:after {
 .form_banner_1 {
     position: relative;
     background: rgba(255, 255, 255, 0.91);
-    padding-bottom: 70px
+    padding-bottom: 70px;
+    margin-top: 20px;
 }
 
 .form_banner_1:before {
@@ -406,7 +411,7 @@ nav ul li a:focus:after {
 .format {
     background: #f2f2f2;
     padding-top: 31px;
-    color: #737373;
+    color: #4f4f4f;
     position: relative;
     z-index: 3;
 }
@@ -425,6 +430,7 @@ nav ul li a:focus:after {
 .block_format {
     background: #fff;
     padding: 28px 18px;
+    color:#737373;
 }
 
 .block_format .fa {
@@ -486,20 +492,21 @@ nav ul li a:focus:after {
 
 .block_format .description .item_li li {
     position: relative;
-    padding: 6px 0px 3px 27px !important;
+    padding: 2px 0px 3px 27px !important;
+    font-size: 11px;
 }
 
 .block_format .description .item_li li:before {
     content: '';
     position: absolute;
-    background: url("../images/circle.png");
-    width: 9px;
-    height: 8px;
-    top: 11px;
-    left: 11px;
+    background: url("../images/minc.png");
+    width: 5px;
+    height: 4px;
+    top: 10px;
+    left: 15px;
 }
 .block_format .description{
-    height:430px;
+    height: 350px;
 }
 .block_format .zakaz {
     padding-top: 47px;
@@ -523,7 +530,9 @@ nav ul li a:focus:after {
 
 .block_format li.priz {
     color: #ff6d6d;
-    font-size: 18px;
+    font-size: 17px !important;
+    margin-top: 10px;
+
 }
 
 .block_format li.priz:before {
@@ -535,6 +544,7 @@ nav ul li a:focus:after {
     text-align: center;
     padding-top: 25px;
     padding-bottom: 60px;
+    color:#737373;
 }
 
 /*Перезвоним*/
@@ -589,7 +599,8 @@ nav ul li a:focus:after {
 p.text {
     text-align: center;
     margin-top: -55px;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .animator_item {
@@ -671,7 +682,7 @@ p.text {
 }
 
 .heroes_block {
-    margin-top: 70px;
+    margin-top: 10px;
     text-align: center;
     height: 500px;
     visibility: hidden;
@@ -702,19 +713,23 @@ p.text {
 
 .hero_description p {
     font-size: 12px;
+    line-height: 16px;
 }
 
 .hero_description a {
     color: #ff6d6d;
     display: inline-block;
     padding-top: 10px;
+    font-size: 13px;
 }
-
+.hero_description a:hover{
+    color:#fb5151;
+}
 .info_text {
     color: #fff;
     text-align: center;
     margin-top: -40px;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
     font-size: 18px;
 }
 
@@ -756,6 +771,7 @@ p.text {
     padding: 10px 23px;
     text-align: center;
     font-size: 13px;
+    font-weight: 300;
 }
 
 .ic_text a {
@@ -763,10 +779,12 @@ p.text {
     background: transparent;
     color: #fff;
     border: 1px solid #fff;
-    padding: 10px 0px;
+    padding: 3px 0px;
     width: 80%;
     margin-top: 25px;
     border-radius: 4px;
+    font-weight: 100;
+    font-size: 13px;
 }
 
 .programma {
@@ -913,11 +931,12 @@ figure.effect-julia img {
     -ms-transition: all 1s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-
 }
+
 .block:hover img {
     opacity: 0.4;
     transform: scale(1.5) rotate(10deg);
+    -webkit-transform: scale(1.5) rotate(10deg);
     -moz-transform: scale(1.5) rotate(10deg);
     -ms-transform: scale(1.5) rotate(10deg);
 }
@@ -998,7 +1017,7 @@ figure.effect-julia img {
     width: 56px;
     height: 57px;
     bottom: 127px;
-    left: -54px;
+    left: -74px;
 }
 
 .owl-next {
@@ -1288,7 +1307,10 @@ hr {
     height: 59px;
     background: #fff !important;
     transition: transform 0.5s;
-
+    -webkit-transition: transform 0.5s;
+    -webkit-transform: scale3d(1, 2, 1);
+    transform: scale3d(1, 2, 1);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
 }
 
 .button--isi:hover::before {
@@ -1318,6 +1340,7 @@ hr {
     height: 59px;
     background: #ff6d6d !important;
     transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
 
 }
 
@@ -1340,7 +1363,7 @@ hr {
     width: 100%;
     background: #000;
     background: rgba(0,0,0,.8);
-    z-index: 100;
+    z-index: 200;
     display: none;
     top: 0;
     left: 0;
@@ -1352,7 +1375,7 @@ hr {
     margin: auto;
     width: 100%;
     position: absolute;
-    z-index: 101;
+    z-index: 300;
 }
 /* ячейка блочной таблицы */
 .dm-cell {
@@ -1371,7 +1394,8 @@ hr {
     padding: 30px;
     background: #fff;
     position: relative;
-    text-align: left;
+    text-align: center;
+    width: 100%;
 }
 .close-reveal-modal{
     cursor:pointer;
@@ -1396,6 +1420,66 @@ hr {
     background: url("../images/close_form.png");
     top: -18px;
 }
-.form_style{
+.form_style input{
+    width:100%;
+    margin-bottom: 22px;
+    display: block;
+    background: none;
+    padding: 13px 15px;
+    font-size: 14px;
+    color: #4f4f4f;
+    outline: none;
+    border: 1px solid #4f4f4f;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form_style h2{
+    font-size: 36px;
+    color:#ff6d6d;
+    padding-bottom: 20px;
+}
+.form_style p{
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 30px;
 
+}
+.form_style input::-moz-placeholder {
+    color: #4f4f4f;
+    opacity: 1;
+}
+
+.form_style input:-ms-input-placeholder {
+    color: #4f4f4f;
+}
+
+.form_style input::-webkit-input-placeholder {
+    color: #4f4f4f;
+}
+.ras_sv{
+    width:307px;
+}
+.new_modal{
+    width:870px;
+}
+.pop_left{
+    float:left;
+    width:40%;
+}
+.pop_right{
+    width:60%;
+    float:right;
+    text-align: left;
+}
+
+.pop_right ul li{
+
+}
+
+.pop_right h2{
+    text-align: left;
 }
