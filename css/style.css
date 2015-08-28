@@ -1092,7 +1092,7 @@ figure.effect-julia img {
 
 .sotrudnik {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 45px;
 }
 
 .sotrudnik h3 {
@@ -1147,10 +1147,33 @@ figure.effect-julia img {
 
 .otziv .details_content {
     background: #fff;
+    position:relative;
+    border: 1px solid #E9E9E9;
 }
 
+.pos_1 .details_content:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: url("../images/strel_right.png");
+    width: 16px;
+    height: 24px;
+    top: 13px;
+    right: -16px;
+}
+.pos_2 .details_content:before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: url("../images/strela.png");
+    width: 16px;
+    height: 24px;
+    top: 13px;
+    left: -15px;
+}
 .pos_1 .details_content {
     text-align: right;
+
 }
 
 .pos_2 .details_content {

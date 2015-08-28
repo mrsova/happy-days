@@ -52,6 +52,13 @@
 
     };
 
+    /*Программы для подростков и детей*/
+    $(".ic_container").capslide({
+        caption_color: '#fff',
+        caption_bgcolor: 'rgba(232, 101, 99, 0.92)',
+        border: false
+    });
+
     /*-----------------------------------*/
 
     $('nav ul li a').click(function () {
@@ -175,13 +182,6 @@
             var el = $(this);
             animated(el,"pulse");
         });
-    });
-
-    /*Программы для подростков и детей*/
-    $(".ic_container").capslide({
-        caption_color: '#fff',
-        caption_bgcolor: 'rgba(232, 101, 99, 0.92)',
-        border: false
     });
 
     /*Показать подробнее*/
